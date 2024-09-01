@@ -81,6 +81,15 @@ const NavigationBar = () => {
           >
             Por que Buzzvel?
           </button>
+          <button
+            onClick={() => {
+              handleScrollToSection("projects");
+              setIsMenuOpen(false); // Fechar o menu após a seleção
+            }}
+            className="block px-4 py-2 text-lightText dark:text-darkText hover:bg-gray-200 dark:hover:bg-gray-700"
+          >
+            Projetos Buzzvel
+          </button>
         </motion.div>
       )}
 
