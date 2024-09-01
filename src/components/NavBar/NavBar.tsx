@@ -63,6 +63,24 @@ const NavigationBar = () => {
           >
             Hero
           </button>
+          <button
+            onClick={() => {
+              handleScrollToSection("experience");
+              setIsMenuOpen(false); // Fechar o menu após a seleção
+            }}
+            className="block px-4 py-2 text-lightText dark:text-darkText hover:bg-gray-200 dark:hover:bg-gray-700"
+          >
+            Experiência
+          </button>
+          <button
+            onClick={() => {
+              handleScrollToSection("why-buzzvel");
+              setIsMenuOpen(false); // Fechar o menu após a seleção
+            }}
+            className="block px-4 py-2 text-lightText dark:text-darkText hover:bg-gray-200 dark:hover:bg-gray-700"
+          >
+            Por que Buzzvel?
+          </button>
         </motion.div>
       )}
 
@@ -79,6 +97,18 @@ const NavigationBar = () => {
           className="text-lightText dark:text-darkText hover:underline"
         >
           Hero
+        </button>
+        <button
+          onClick={() => handleScrollToSection("experience")}
+          className="text-lightText dark:text-darkText hover:underline"
+        >
+          Experiência
+        </button>
+        <button
+          onClick={() => handleScrollToSection("why-buzzvel")}
+          className="text-lightText dark:text-darkText hover:underline"
+        >
+          Por que Buzzvel?
         </button>
       </div>
 
