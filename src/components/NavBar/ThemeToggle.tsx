@@ -3,11 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { themeButtonVariants } from "@/animations/NavBar";
 import { FaRegMoon, FaRegSun } from "react-icons/fa";
-
-interface ThemeToggleProps {
-  isDarkMode: boolean;
-  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import { ThemeToggleProps } from "@/interfaces/types";
 
 const ThemeToggle: React.FC<ThemeToggleProps> = ({
   isDarkMode,
@@ -15,6 +11,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({
 }) => {
   return (
     <motion.button
+      data-testid={isDarkMode ? "theme-toggle" : "theme-toggle-dark"}
       className="ml-4 text-lightText dark:text-darkText p-2 rounded-full transition-colors duration-300"
       variants={themeButtonVariants}
       animate={isDarkMode ? "darkMode" : "default"}

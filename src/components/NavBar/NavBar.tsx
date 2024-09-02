@@ -16,19 +16,29 @@ const NavigationBar = () => {
     isMenuOpen,
     setIsMenuOpen,
     handleScrollToSection,
-  } = useNavigation(); // Usar o custom hook
+  } = useNavigation();
 
   return (
-    <nav className="fixed w-full top-0 left-0 z-50 flex items-center justify-between px-4 py-2 bg-lightBackground dark:bg-darkBackground shadow-md">
-      {/* Botão do Menu Móvel */}
-      <HamburgerButton isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+    <nav
+      className="fixed w-full top-0 left-0 z-50 flex items-center justify-between px-4 py-2 bg-lightBackground dark:bg-darkBackground shadow-md"
+      data-testid="navigation-bar"
+    >
+      {/* Mobile Menu Button */}
+      <HamburgerButton
+        isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
+        data-testid="hamburger-button"
+      />
 
-      {/* Título do Challenge */}
-      <div className="flex  flex-grow items-center justify-center text-lg font-semibold text-lightText dark:text-darkText">
+      {/* Challenge title */}
+      <div
+        className="flex flex-grow items-center justify-center text-lg font-semibold text-lightText dark:text-darkText"
+        data-testid="buzzvel-title"
+      >
         Buzzvel Challenge
       </div>
 
-      {/* Menu Móvel */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -37,20 +47,29 @@ const NavigationBar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
+            data-testid="mobile-menu"
           >
             <MenuItems
               handleScrollToSection={handleScrollToSection}
               setIsMenuOpen={setIsMenuOpen}
+              data-testid="menu-items"
             />
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Menu em Telas Maiores */}
-      <DesktopMenu handleScrollToSection={handleScrollToSection} />
+      {/* Menu on Larger Screens */}
+      <DesktopMenu
+        handleScrollToSection={handleScrollToSection}
+        data-testid="desktop-menu"
+      />
 
-      {/* Título e Botão de Alternância de Tema */}
-      <ThemeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      {/* Title and Theme Toggle Button */}
+      <ThemeToggle
+        isDarkMode={isDarkMode}
+        setIsDarkMode={setIsDarkMode}
+        data-testid="theme-toggle"
+      />
     </nav>
   );
 };
