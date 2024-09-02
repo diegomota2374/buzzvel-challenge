@@ -1,0 +1,29 @@
+// src/components/ThemeToggle.tsx
+import React from "react";
+import { motion } from "framer-motion";
+import { themeButtonVariants } from "@/animations/NavBar";
+import { FaRegMoon, FaRegSun } from "react-icons/fa";
+
+interface ThemeToggleProps {
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const ThemeToggle: React.FC<ThemeToggleProps> = ({
+  isDarkMode,
+  setIsDarkMode,
+}) => {
+  return (
+    <motion.button
+      className="ml-4 text-lightText dark:text-darkText p-2 rounded-full transition-colors duration-300"
+      variants={themeButtonVariants}
+      animate={isDarkMode ? "darkMode" : "default"}
+      onClick={() => setIsDarkMode(!isDarkMode)}
+      aria-label="Toggle Dark Mode"
+    >
+      {isDarkMode ? <FaRegMoon /> : <FaRegSun />}
+    </motion.button>
+  );
+};
+
+export default ThemeToggle;

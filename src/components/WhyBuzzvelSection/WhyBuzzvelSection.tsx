@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const WhyBuzzvelSection = () => {
   return (
     <section
-      id="why-buzzvel"
+      id="why buzzvel"
       className="py-12 px-4 sm:px-6 lg:px-8 bg-lightBackground dark:bg-darkBackground"
     >
       <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-8">
