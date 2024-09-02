@@ -19,6 +19,7 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ handleScrollToSection }) => {
         "timeline",
       ].map((section) => (
         <button
+          key={section}
           onClick={() => handleScrollToSection(section)}
           className="text-lightText dark:text-darkText hover:underline"
           data-testid={`desktop-menu-button-${section
