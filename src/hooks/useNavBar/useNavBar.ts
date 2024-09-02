@@ -1,7 +1,7 @@
-// src/hooks/useNavigation.ts
+// src/hooks/useNavBar.ts
 import { useEffect, useState } from "react";
 
-export const useNavigation = () => {
+export const useNavBar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

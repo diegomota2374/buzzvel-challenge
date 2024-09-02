@@ -1,18 +1,18 @@
 // src/components/NavigationBar/NavigationBar.test.tsx
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import { useNavigation } from "@/hooks/useNavigation/useNavigation";
+import { useNavBar } from "@/hooks/useNavBar/useNavBar";
 import NavigationBar from "../NavBar";
 const { expect, describe, it } = require("@jest/globals");
 
-// Mock the useNavigation hook
-jest.mock("@/hooks/useNavigation/useNavigation", () => ({
-  useNavigation: jest.fn(),
+// Mock the useNavBar hook
+jest.mock("@/hooks/useNavBar/useNavBar", () => ({
+  useNavBar: jest.fn(),
 }));
 
 describe("NavigationBar", () => {
   beforeEach(() => {
-    (useNavigation as jest.Mock).mockReturnValue({
+    (useNavBar as jest.Mock).mockReturnValue({
       isDarkMode: false,
       setIsDarkMode: jest.fn(),
       isMenuOpen: false,
@@ -35,7 +35,7 @@ describe("NavigationBar", () => {
 
   it("toggles the mobile menu when hamburger button is clicked", () => {
     const setIsMenuOpen = jest.fn();
-    (useNavigation as jest.Mock).mockReturnValue({
+    (useNavBar as jest.Mock).mockReturnValue({
       isDarkMode: false,
       setIsDarkMode: jest.fn(),
       isMenuOpen: false,
@@ -51,7 +51,7 @@ describe("NavigationBar", () => {
 
   it("calls handleScrollToSection when a menu item is clicked", () => {
     const handleScrollToSection = jest.fn();
-    (useNavigation as jest.Mock).mockReturnValue({
+    (useNavBar as jest.Mock).mockReturnValue({
       isDarkMode: false,
       setIsDarkMode: jest.fn(),
       isMenuOpen: true, // Assume the menu is open for this test
@@ -67,7 +67,7 @@ describe("NavigationBar", () => {
 
   it("toggles dark mode when the theme toggle button is clicked", () => {
     const setIsDarkMode = jest.fn();
-    (useNavigation as jest.Mock).mockReturnValue({
+    (useNavBar as jest.Mock).mockReturnValue({
       isDarkMode: false,
       setIsDarkMode,
       isMenuOpen: false,

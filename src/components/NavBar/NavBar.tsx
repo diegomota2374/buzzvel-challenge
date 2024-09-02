@@ -7,7 +7,7 @@ import HamburgerButton from "./HamburgerButton";
 import MenuItems from "./MenuItems";
 import DesktopMenu from "./DesktopMenu";
 import ThemeToggle from "./ThemeToggle";
-import { useNavigation } from "@/hooks/useNavigation/useNavigation";
+import { useNavBar } from "@/hooks/useNavBar/useNavBar";
 
 const NavigationBar = () => {
   const {
@@ -16,7 +16,7 @@ const NavigationBar = () => {
     isMenuOpen,
     setIsMenuOpen,
     handleScrollToSection,
-  } = useNavigation();
+  } = useNavBar();
 
   return (
     <nav
