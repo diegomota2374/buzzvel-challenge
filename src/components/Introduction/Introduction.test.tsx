@@ -12,10 +12,6 @@ describe("Introduction Component", () => {
     const sectionElement = screen.getByTestId("introduction-section");
     expect(sectionElement).toBeInTheDocument();
 
-    // Check if the background image is present
-    const backgroundImage = screen.getByTestId("background-image");
-    expect(backgroundImage).toBeInTheDocument();
-
     // Check if the gradient overlay is present
     const gradientOverlay = screen.getByTestId("gradient-overlay");
     expect(gradientOverlay).toBeInTheDocument();
@@ -23,6 +19,14 @@ describe("Introduction Component", () => {
     // Check if the animated content is present
     const animatedContent = screen.getByTestId("animated-content");
     expect(animatedContent).toBeInTheDocument();
+
+    // Check if the animated diagonalStripeTopLeft is present
+    const diagonalStripeTopLeft = screen.getByTestId("left-stripe");
+    expect(diagonalStripeTopLeft).toBeInTheDocument();
+
+    // Check if the animated diagonalStripeBottomRight is present
+    const diagonalStripeBottomRight = screen.getByTestId("right-stripe");
+    expect(diagonalStripeBottomRight).toBeInTheDocument();
 
     // Check if the main heading text is correct
     const mainHeading = screen.getByTestId("main-heading");
