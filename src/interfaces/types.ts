@@ -21,3 +21,15 @@ export interface ExperienceItemProps {
   year: string;
   description: React.ReactNode;
 }
+
+export interface SlideProps {
+  slide: {
+    title: string;
+    description: string;
+    imagePath: string;
+  };
+}
+
+export interface ButtonProps {
+  onClick: () => void;
+}
