@@ -21,7 +21,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({
         "introduction",
         "hero",
         "experience",
-        "why buzzvel",
+        "why Buzzvel",
         "projects",
         "timeline",
       ].map((section) => (

@@ -17,7 +17,7 @@ describe("MenuItems", () => {
       "introduction",
       "hero",
       "experience",
-      "why buzzvel",
+      "why Buzzvel",
       "projects",
       "timeline",
     ];

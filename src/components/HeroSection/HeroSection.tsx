@@ -1,10 +1,47 @@
 "use client";
 
-import React from "react";
-import useHeroSection from "@/hooks/useHeroSection/useHeroSection";
+import React, { useEffect, useRef } from "react";
+import { useInView } from "react-intersection-observer";
+import gsap from "gsap";
 
 const HeroSection = () => {
-  const { ref, profileImageRef, sloganRef, paragraphRef } = useHeroSection();
+  const profileImageRef = useRef<HTMLImageElement>(null);
+  const sloganRef = useRef<HTMLHeadingElement>(null);
+  const paragraphRef = useRef<HTMLHeadingElement>(null);
+
+  // Track if the section is in view
+  const { ref, inView } = useInView({
+    triggerOnce: false, // Ensure the animation can re-trigger
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      // GSAP animations for profile image and slogan
+      gsap.from(profileImageRef.current, {
+        opacity: 0,
+        y: -50,
+        duration: 1.5,
+        ease: "power3.out",
+      });
+
+      gsap.from(sloganRef.current, {
+        opacity: 0,
+        y: 30,
+        duration: 1.5,
+        delay: 0.5,
+        ease: "power3.out",
+      });
+
+      gsap.from(paragraphRef.current, {
+        opacity: 0,
+        y: 20,
+        duration: 1.5,
+        delay: 1,
+        ease: "power3.out",
+      });
+    }
+  }, [inView]); // Re-run the effect when inView changes
 
   return (
     <section

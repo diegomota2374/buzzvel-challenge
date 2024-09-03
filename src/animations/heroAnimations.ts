@@ -14,7 +14,7 @@ export const animateProfileImage = (element: HTMLImageElement | null) => {
       ease: "power3.out",
       scrollTrigger: {
         trigger: element,
-        start: "top 80%", // Inicia a animação quando o topo do elemento atinge 80% da viewport
+        start: "top 80%",
         toggleActions: "play none none none",
       },
     });

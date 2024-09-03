@@ -20,7 +20,7 @@ const WhyBuzzvel = () => {
 
   return (
     <section
-      id="why-buzzvel"
+      id="why Buzzvel"
       className="py-12 px-4 sm:px-6 lg:px-8 bg-lightBackground dark:bg-darkBackground"
       ref={ref}
       data-testid="why-buzzvel-section"

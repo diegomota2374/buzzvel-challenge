@@ -14,7 +14,7 @@ describe("DesktopMenu", () => {
       "introduction",
       "hero",
       "experience",
-      "why buzzvel",
+      "why Buzzvel",
       "projects",
       "timeline",
     ];
@@ -33,7 +33,7 @@ describe("DesktopMenu", () => {
       "introduction",
       "hero",
       "experience",
-      "why buzzvel",
+      "why Buzzvel",
       "projects",
       "timeline",
     ];
