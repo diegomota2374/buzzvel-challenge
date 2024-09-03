@@ -7,11 +7,11 @@ import {
   diagonalStripeTopLeft,
   diagonalStripeBottomRight,
   contentAnimation,
-} from "@/animations/introductionAnimations"; // Ajuste o caminho conforme necessário
+} from "@/animations/introductionAnimations";
 
 const Introduction = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false, // Garante que a animação pode ser reativada
+    triggerOnce: false, // Ensures that the animation can be reactivated
     threshold: 0.1,
   });
 

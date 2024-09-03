@@ -1,7 +1,6 @@
 // app/page.tsx
 "use client";
 
-import ExperienceSection from "@/components/ExperienceItem/ExperienceItem";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import Introduction from "@/components/Introduction/Introduction";
 import NavigationBar from "@/components/NavBar/NavBar";
@@ -11,6 +10,7 @@ import WhyBuzzvelSection from "@/components/WhyBuzzvelSection/WhyBuzzvelSection"
 import Footer from "@/components/Footer/Footer"; // Importando o Footer
 import { NextSeo } from "next-seo";
 import React from "react";
+import ExperienceSection from "@/components/ExperienceSection/ExperienceSection";
 
 const Home = () => {
   return (

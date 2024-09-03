@@ -16,3 +16,8 @@ export interface HamburgerButtonProps {
 export interface DesktopMenuProps {
   handleScrollToSection: (sectionId: string) => void;
 }
+
+export interface ExperienceItemProps {
+  year: string;
+  description: React.ReactNode;
+}

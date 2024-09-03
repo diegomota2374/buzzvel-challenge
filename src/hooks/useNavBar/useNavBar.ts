@@ -28,7 +28,15 @@ export const useNavBar = () => {
   const handleScrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+      const paddingTop = parseFloat(
+        window.getComputedStyle(section).paddingTop
+      );
+
+      window.scrollTo({
+        top: sectionTop - paddingTop,
+        behavior: "smooth",
+      });
     }
   };
 
