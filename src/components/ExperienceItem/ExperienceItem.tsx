@@ -21,12 +21,19 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
       animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -50 }}
       transition={{ duration: 1.5 }}
       className="flex items-start mb-6"
+      data-testid="experience-item"
     >
       <div className="border-l-2 border-gray-300 dark:border-gray-600 pl-4">
-        <div className="text-lg font-semibold text-gray-600 dark:text-gray-200">
+        <div
+          className="text-lg font-semibold text-gray-600 dark:text-gray-200"
+          data-testid="experience-item-year"
+        >
           {year}
         </div>
-        <div className="text-md text-gray-700 dark:text-gray-400 mt-2">
+        <div
+          className="text-md text-gray-700 dark:text-gray-400 mt-2"
+          data-testid="experience-item-description"
+        >
           {description}
         </div>
       </div>
