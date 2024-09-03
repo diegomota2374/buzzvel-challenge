@@ -14,7 +14,7 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ handleScrollToSection }) => {
         "introduction",
         "hero",
         "experience",
-        "why buzzvel",
+        "why Buzzvel",
         "projects",
         "timeline",
       ].map((section) => (
