@@ -1,7 +1,7 @@
 // src/components/ExperienceSection.tsx
 
 import React from "react";
-import ExperienceItem from "../ExperienceItem/ExperienceItem";
+import ExperienceItem from "./ExperienceItem";
 
 const ExperienceSection = () => {
   return (

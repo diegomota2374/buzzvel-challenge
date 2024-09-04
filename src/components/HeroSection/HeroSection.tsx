@@ -12,7 +12,7 @@ const HeroSection = () => {
   // Track if the section is in view
   const { ref, inView } = useInView({
     triggerOnce: false, // Ensure the animation can re-trigger
-    threshold: 0.1,
+    threshold: 0.5,
   });
 
   useEffect(() => {

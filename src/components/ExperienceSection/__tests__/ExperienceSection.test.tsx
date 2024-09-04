@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import ExperienceSection from "./ExperienceSection";
+import ExperienceSection from "../ExperienceSection";
 
 describe("ExperienceSection", () => {
   test("renders the section title", () => {

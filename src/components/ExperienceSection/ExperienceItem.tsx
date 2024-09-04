@@ -11,7 +11,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 }) => {
   const { ref, inView } = useInView({
     triggerOnce: false, // Ensures that the animation can be reactivated
-    threshold: 0.1,
+    threshold: 0.4,
   });
 
   return (
