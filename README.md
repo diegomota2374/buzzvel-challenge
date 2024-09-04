@@ -1,48 +1,45 @@
-Buzzvel Microsite
+markdown
+
+# Buzzvel Microsite
 
 This project is a fully responsive and SEO-optimized microsite developed to showcase my experience, explain my motivation to work at Buzzvel, and highlight Buzzvel's projects. Built using Next.js with TypeScript and styled with TailwindCSS, this site incorporates animations using GSAP and Framer Motion, ensuring a smooth and visually engaging user experience.
-Table of Contents
 
-    Features
-    Technologies Used
-    Project Structure
-    Installation
-    Running the Project
-    Testing
-    SEO Optimization
-    Responsive Design
-    Animations
-    Deployment
-    Contact
+## Table of Contents
 
-Features
+- [Buzzvel Microsite](#buzzvel-microsite)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Technologies Used](#technologies-used)
+  - [Project Structure](#project-structure)
 
-    Landing Page:
-        Animated introduction with name, title, and welcome message.
-        Hero section with a photo, tagline, and smooth entrance animations.
-        Responsive navigation bar with smooth scrolling.
+## Features
 
-    About Me Section:
-        Animated timeline of professional experience and skills.
-        Explanation of why I want to work at Buzzvel with text fades.
+- **Landing Page**:
+  - Animated introduction with name, title, and welcome message.
+  - Hero section with a photo, tagline, and smooth entrance animations.
+  - Responsive navigation bar with smooth scrolling.
 
-    Buzzvel Projects Slideshow:
-        Interactive slideshow featuring key Buzzvel projects.
-        Smooth transitions and responsiveness for all screen sizes.
+- **About Me Section**:
+  - Animated timeline of professional experience and skills.
+  - Explanation of why I want to work at Buzzvel with text fades.
 
-    Career Timeline:
-        Visual timeline outlining a 3-5 year career progression at Buzzvel.
-        Smooth scrolling and reveal animations as users navigate through the timeline.
+- **Buzzvel Projects Slideshow**:
+  - Interactive slideshow featuring key Buzzvel projects.
+  - Smooth transitions and responsiveness for all screen sizes.
 
-Technologies Used
+- **Career Timeline**:
+  - Visual timeline outlining a 3-5 year career progression at Buzzvel.
+  - Smooth scrolling and reveal animations as users navigate through the timeline.
 
-    Framework: Next.js
-    Language: TypeScript
-    Styling: TailwindCSS
-    Animations: GSAP, Framer Motion
-    Testing: Jest
-    SEO Optimization: Semantic HTML, Meta Tags, nex-seo
-    Responsive Design: Media queries, Flexible layouts, Responsive units
+## Technologies Used
+
+- **Framework**: Next.js
+- **Language**: TypeScript
+- **Styling**: TailwindCSS
+- **Animations**: GSAP, Framer Motion
+- **Testing**: Jest
+- **SEO Optimization**: Semantic HTML, Meta Tags, nex-seo
+- **Responsive Design**: Media queries, Flexible layouts, Responsive units
 
 ## Project Structure
 
@@ -137,8 +134,6 @@ Here's a breakdown of the project structure:
 ├── tsconfig.json
 └── ...
 
-
-
 Installation
 
     Clone the repository:
@@ -146,6 +141,7 @@ Installation
     bash
 
 git clone https://github.com/diegomota2374/buzzvel-challenge.git
+
 
 Install dependencies:
 
