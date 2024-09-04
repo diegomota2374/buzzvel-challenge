@@ -41,7 +41,7 @@ describe("Timeline Component", () => {
     expect(firstEventYear).toHaveTextContent("Year 1");
 
     const firstEventTitle = screen.getByTestId("timeline-title-0");
-    expect(firstEventTitle).toHaveTextContent("Foundation and Integration");
+    expect(firstEventTitle).toHaveTextContent("Establishing the Foundation");
 
     const firstEventDetails = screen.getAllByTestId(/timeline-detail-0-/);
     expect(firstEventDetails).toHaveLength(3); // Checks for three details

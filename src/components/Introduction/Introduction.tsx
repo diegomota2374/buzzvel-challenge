@@ -8,6 +8,7 @@ import {
   diagonalStripeBottomRight,
   contentAnimation,
 } from "@/animations/introductionAnimations";
+import SocialLinks from "../SocialLinks/SocialLinks";
 
 const Introduction = () => {
   const { ref, inView } = useInView({
@@ -68,12 +69,15 @@ const Introduction = () => {
           Welcome to My Microsite!
         </h1>
         <p
-          className="text-lg text-gray-700 dark:text-gray-300"
+          className="text-lg text-gray-700 dark:text-gray-300 mb-6"
           data-testid="subheading"
         >
           I'm Diego Mota Cavalcante, a developer focused on creating innovative
           web experiences.
         </p>
+
+        {/* Social media */}
+        <SocialLinks />
       </motion.div>
     </section>
   );

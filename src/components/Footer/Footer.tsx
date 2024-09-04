@@ -1,77 +1,64 @@
 "use client";
 
 import React from "react";
-import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa"; // Importando ícones de redes sociais
+import SocialLinks from "../SocialLinks/SocialLinks";
 
 const Footer = () => {
   return (
-    <footer className="bg-lightBackground dark:bg-darkBackground py-8">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          {/* Navegação do Footer */}
-          <div className="mb-4 md:mb-0">
-            <ul className="flex space-x-6">
-              <li>
+    <footer
+      className="bg-lightBackground dark:bg-darkBackground py-8"
+      data-testid="footer"
+    >
+      <div className="container mx-auto px-4" data-testid="footer-container">
+        <div
+          className="flex flex-col md:flex-row justify-between items-center"
+          data-testid="footer-content"
+        >
+          {/* Footer Navigation */}
+          <div className="mb-4 md:mb-0" data-testid="footer-navigation">
+            <ul className="flex space-x-6" data-testid="footer-nav-list">
+              <li data-testid="footer-nav-item-0">
                 <a
                   href="#introduction"
                   className="text-lightText dark:text-darkText hover:underline"
+                  data-testid="footer-nav-link-introduction"
                 >
-                  Introdução
+                  Introduction
                 </a>
               </li>
-              <li>
+              <li data-testid="footer-nav-item-1">
                 <a
                   href="#experience"
                   className="text-lightText dark:text-darkText hover:underline"
+                  data-testid="footer-nav-link-experience"
                 >
-                  Experiência
+                  Experience
                 </a>
               </li>
-              <li>
+              <li data-testid="footer-nav-item-2">
                 <a
                   href="#why-buzzvel"
                   className="text-lightText dark:text-darkText hover:underline"
+                  data-testid="footer-nav-link-why-buzzvel"
                 >
-                  Por que Buzzvel?
+                  Why buzzvel
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Redes Sociais */}
-          <div className="flex space-x-4">
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-            >
-              <FaTwitter className="text-lightText dark:text-darkText hover:text-blue-500 dark:hover:text-blue-400 text-xl" />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin className="text-lightText dark:text-darkText hover:text-blue-700 dark:hover:text-blue-500 text-xl" />
-            </a>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <FaGithub className="text-lightText dark:text-darkText hover:text-gray-900 dark:hover:text-gray-100 text-xl" />
-            </a>
-          </div>
+          {/* Social media */}
+          <SocialLinks data-testid="social-links" />
         </div>
 
-        {/* Direitos Autorais */}
-        <div className="mt-8 text-center text-gray-600 dark:text-gray-400">
-          <p>
-            &copy; {new Date().getFullYear()} Meu Microsite. Todos os direitos
-            reservados.
+        {/* Copyright */}
+        <div
+          className="mt-8 text-center text-gray-600 dark:text-gray-400"
+          data-testid="footer-copyright"
+        >
+          <p data-testid="footer-copyright-text">
+            &copy; {new Date().getFullYear()} My Microsite. Diego Mota
+            Cavalcante.
           </p>
         </div>
       </div>
