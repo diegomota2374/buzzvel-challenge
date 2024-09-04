@@ -44,10 +44,11 @@ Technologies Used
     SEO Optimization: Semantic HTML, Meta Tags, nex-seo
     Responsive Design: Media queries, Flexible layouts, Responsive units
 
-Project Structure
+## Project Structure
 
-plaintext
+Here's a breakdown of the project structure:
 
+```plaintext
 ├── src
 │   ├── animations
 │   │   └── // Large animation files and utilities
@@ -135,7 +136,6 @@ plaintext
 ├── tailwind.config.ts
 ├── tsconfig.json
 └── ...
-
 
 
 
