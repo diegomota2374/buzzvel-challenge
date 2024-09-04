@@ -8,29 +8,29 @@ const Timeline: React.FC = () => {
   const events = [
     {
       year: "Year 1",
-      title: "Foundation and Integration",
+      title: "Establishing the Foundation",
       details: [
-        "Onboarding: Get familiar with Buzzvel’s processes, tools, and team.",
-        "Mentorship: Work closely with a senior developer.",
-        "Initial Contributions: Take on small tasks and learn the company’s coding standards.",
+        "Immersion: I will dive deep into the Buzzvel ecosystem, getting to know its tools, processes and team dynamics.",
+        "Guided Learning: I will team up with a senior developer to accelerate my understanding and development skills.",
+        "Initial contributions: I will solve smaller tasks with a focus on mastering the company's coding standards and workflows.",
       ],
     },
     {
       year: "Year 2-3",
-      title: "Growth and Increased Responsibility",
+      title: "Expanding Skills and Taking Control",
       details: [
-        "Project Ownership: Lead small to medium-sized projects.",
-        "Skill Development: Master advanced concepts and possibly learn new technologies relevant to Buzzvel’s stack.",
-        "Mentorship: Start mentoring junior developers.",
+        "Project Leadership: I will take responsibility for small and medium-sized projects, ensuring they are aligned with Buzzvel's objectives.",
+        "Skills enhancement: I will deepen my knowledge of advanced concepts and explore new technologies that are fundamental to Buzzvel's success.",
+        "Mentor Role: I will begin mentoring junior developers, helping them integrate and grow within the team.",
       ],
     },
     {
       year: "Year 4-5",
       title: "Leadership and Innovation",
       details: [
-        "Leadership Role: Potentially step into a team lead or senior developer role.",
-        "Innovation: Contribute to the strategic direction of front-end development at Buzzvel.",
-        "Continuous Learning: Stay updated with the latest industry trends and apply them at Buzzvel.",
+        "Stepping up: I will seek a leadership role, whether as a team leader or senior developer, driving important initiatives.",
+        "Strategic Contribution: I will play a significant role in setting the direction of front-end development at Buzzvel, introducing innovative solutions.",
+        "Lifelong Learning: I will stay at the forefront of industry trends and continually bring new insights to Buzzvel projects.",
       ],
     },
   ];
