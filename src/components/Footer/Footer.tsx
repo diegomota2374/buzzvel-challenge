@@ -41,7 +41,7 @@ const Footer = () => {
                   className="text-lightText dark:text-darkText hover:underline"
                   data-testid="footer-nav-link-why-buzzvel"
                 >
-                  Why buzzvel
+                  Why Buzzvel
                 </a>
               </li>
             </ul>
