@@ -37,7 +37,6 @@ const Introduction = () => {
         exit="hidden"
         transition={{ duration: 1.2, ease: "easeOut" }}
         className="absolute top-0 left-0 w-1/4 h-1/4 bg-teal-500 dark:bg-teal-800 rounded-br-lg"
-        style={{ transform: "rotate(-45deg)" }}
         data-testid="left-stripe"
       />
 
@@ -48,7 +47,6 @@ const Introduction = () => {
         exit="hidden"
         transition={{ duration: 1.2, ease: "easeOut" }}
         className="absolute bottom-0 right-0 w-1/4 h-1/4 bg-cyan-500 dark:bg-cyan-800 rounded-tl-lg"
-        style={{ transform: "rotate(-45deg)" }}
         data-testid="right-stripe"
       />
 
@@ -62,22 +60,25 @@ const Introduction = () => {
         className="text-center px-4 sm:px-6 lg:px-8 bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg border-2 border-gray-400 dark:border-gray-700 hover:shadow-2xl transform transition-transform duration-300 hover:scale-105"
         data-testid="animated-content"
       >
-        <h1
-          className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-200 mb-4"
-          data-testid="main-heading"
-        >
-          Welcome to My Microsite!
-        </h1>
-        <p
-          className="text-lg text-gray-700 dark:text-gray-300 mb-6"
-          data-testid="subheading"
-        >
-          I'm Diego Mota Cavalcante, a developer focused on creating innovative
-          web experiences.
-        </p>
-
+        <div>
+          <h1
+            className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-200 mb-4"
+            data-testid="main-heading"
+          >
+            Welcome to My Microsite!
+          </h1>
+          <p
+            className="text-lg text-gray-700 dark:text-gray-300 mb-6"
+            data-testid="subheading"
+          >
+            I'm Diego Mota Cavalcante, a developer focused on creating
+            innovative web experiences.
+          </p>
+        </div>
         {/* Social media */}
-        <SocialLinks />
+        <div className="flex justify-end">
+          <SocialLinks />
+        </div>
       </motion.div>
     </section>
   );

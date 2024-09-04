@@ -40,7 +40,7 @@ const SlideShow = () => {
 
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.3,
+    threshold: 0.1,
   });
 
   useEffect(() => {
