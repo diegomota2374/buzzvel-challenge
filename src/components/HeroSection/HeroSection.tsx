@@ -64,6 +64,12 @@ const HeroSection = () => {
               height: 600,
               alt: "Diego Mota Cavalcante",
             },
+            {
+              url: `${baseUrl}/assets/hero-section-back.jpg`,
+              width: 800,
+              height: 600,
+              alt: "back-hero-section",
+            },
           ],
           site_name: "buzzvel-challenge",
         }}
