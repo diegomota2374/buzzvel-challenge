@@ -12,7 +12,7 @@ import SocialLinks from "../SocialLinks/SocialLinks";
 import { NextSeo } from "next-seo";
 
 const Introduction = () => {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
 
   const { ref, inView } = useInView({
     triggerOnce: false, // Ensures that the animation can be reactivated
@@ -31,7 +31,6 @@ const Introduction = () => {
           title: "Diego Mota Cavalcante - Developer",
           description:
             "Welcome to my microsite! I am a developer focused on creating innovative web experiences.",
-
           site_name: "buzzvel-challenge",
         }}
       />
@@ -89,7 +88,7 @@ const Introduction = () => {
               className="text-lg text-gray-700 dark:text-gray-300 mb-6"
               data-testid="subheading"
             >
-              I'm Diego Mota Cavalcante, a developer focused on creating
+              I&apos;m Diego Mota Cavalcante, a developer focused on creating
               innovative web experiences.
             </p>
           </div>

@@ -1,3 +1,4 @@
+// pages/_document.tsx
 import Document, {
   Html,
   Head,
@@ -5,6 +6,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from "next/document";
+import { ReactElement } from "react";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -12,7 +14,7 @@ class MyDocument extends Document {
     return { ...initialProps };
   }
 
-  render() {
+  render(): ReactElement {
     return (
       <Html lang="en">
         <Head>

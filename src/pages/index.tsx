@@ -5,7 +5,7 @@ import HeroSection from "@/components/HeroSection/HeroSection";
 import Introduction from "@/components/Introduction/Introduction";
 import NavigationBar from "@/components/NavBar/NavBar";
 import SlideShow from "@/components/SlideShow/SlideShow";
-import Timeline from "@/components/TimeLine/TimeLine";
+import Timeline from "@/components/TimeLine/Timeline";
 import WhyBuzzvelSection from "@/components/WhyBuzzvelSection/WhyBuzzvelSection";
 import Footer from "@/components/Footer/Footer"; // Importando o Footer
 import { NextSeo } from "next-seo";

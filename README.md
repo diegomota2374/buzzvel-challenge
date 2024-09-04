@@ -49,10 +49,12 @@ Here's a breakdown of the project structure:
 ├── src
 │   ├── animations
 │   │   └── // Large animation files and utilities
-│   ├── app
+│   ├── page
 │   │   ├── _document.tsx
+│   │   ├── _app_.tsx
 │   │   ├── layout.tsx
-│   │   ├── page.tsx
+│   │   ├── index.tsx
+│   │   ├── 404.tsx
 │   │   └── ...
 │   ├── components
 │   │   ├── ExperienceSection
@@ -99,8 +101,10 @@ Here's a breakdown of the project structure:
 │   │   │   └── ...
 │   │   ├── TimeLine
 │   │   │   ├── TimeLine.tsx
-│   │   │   ├── TimeLine.test.tsx
-│   │   │   └── ...
+│   │   │   ├── TimeLineEvent.tsx
+│   │   │   └── __tests__
+│   │   │       ├── TimeLine.test.tsx
+│   │   │       └── TimeLineEvent.test.tsx
 │   │   └── WhyBuzzvelSection
 │   │       ├── WhyBuzzvelSection.tsx
 │   │       ├── WhyBuzzvelSection.test.tsx

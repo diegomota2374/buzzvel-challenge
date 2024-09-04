@@ -1,30 +1,45 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import SlideShow from "../SlideShow";
+import Image from "next/image";
 
 // Mocking the Slide component
 jest.mock("../Slide", () => {
-  return (props: any) => (
+  const MockSlide: React.FC<any> = (props) => (
     <div data-testid={props["data-testid"]}>
-      <img src={props.slide.imagePath} alt={`Project ${props.slide.title}`} />
+      <Image
+        src={props.slide.imagePath}
+        alt={`Project ${props.slide.title}`}
+        width={800} // Ajuste conforme necessário
+        height={600} // Ajuste conforme necessário
+        layout="responsive"
+      />
       <h3>{props.slide.title}</h3>
       <p>{props.slide.description}</p>
     </div>
   );
+  MockSlide.displayName = "Slide"; // Adicionar nome de exibição
+  return MockSlide;
 });
 
 // Mocking the PreviousButton and NextButton components
 jest.mock("../PreviousNextButton", () => {
+  const MockPreviousButton: React.FC<any> = (props) => (
+    <button data-testid={props["data-testid"]} onClick={props.onClick}>
+      Previous
+    </button>
+  );
+  MockPreviousButton.displayName = "PreviousButton";
+
+  const MockNextButton: React.FC<any> = (props) => (
+    <button data-testid={props["data-testid"]} onClick={props.onClick}>
+      Next
+    </button>
+  );
+  MockNextButton.displayName = "NextButton";
+
   return {
-    PreviousButton: (props: any) => (
-      <button data-testid={props["data-testid"]} onClick={props.onClick}>
-        Previous
-      </button>
-    ),
-    NextButton: (props: any) => (
-      <button data-testid={props["data-testid"]} onClick={props.onClick}>
-        Next
-      </button>
-    ),
+    PreviousButton: MockPreviousButton,
+    NextButton: MockNextButton,
   };
 });
 

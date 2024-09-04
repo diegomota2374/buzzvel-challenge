@@ -31,13 +31,12 @@ const WhyBuzzvel = () => {
           title: "Why Buzzvel?",
           description:
             "Discover why Diego Mota Cavalcante is excited about the opportunity to join Buzzvel, focusing on innovation, customer-centric approaches, and dedicated expertise.",
-          url: `${baseUrl}/#why Buzzvel`,
-
+          url: `${baseUrl}/#why-buzzvel`, // Fixed ID to match URL
           site_name: "buzzvel-challenger",
         }}
       />
       <section
-        id="why Buzzvel"
+        id="why-buzzvel"
         className="py-12 px-4 sm:px-6 lg:px-8 bg-lightBackground dark:bg-darkBackground"
         ref={ref}
         data-testid="why-buzzvel-section"
@@ -96,7 +95,7 @@ const WhyBuzzvel = () => {
                 Customer-Centric Approach
               </h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                I value the deep understanding Buzzvel has for its clients'
+                I value the deep understanding Buzzvel has for its clients&apos;
                 needs. Their thorough approach to aligning solutions with client
                 goals is something I admire and am eager to contribute to.
               </p>
