@@ -5,12 +5,12 @@ import HeroSection from "@/components/HeroSection/HeroSection";
 import Introduction from "@/components/Introduction/Introduction";
 import NavigationBar from "@/components/NavBar/NavBar";
 import SlideShow from "@/components/SlideShow/SlideShow";
-import Timeline from "@/components/Timeline/Timeline";
 import WhyBuzzvelSection from "@/components/WhyBuzzvelSection/WhyBuzzvelSection";
 import Footer from "@/components/Footer/Footer"; // Importando o Footer
 import { NextSeo } from "next-seo";
 import React from "react";
 import ExperienceSection from "@/components/ExperienceSection/ExperienceSection";
+import Timeline from "@/components/TimelineSection/Timeline";
 
 const Home = () => {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
