@@ -13,23 +13,21 @@ import React from "react";
 import ExperienceSection from "@/components/ExperienceSection/ExperienceSection";
 
 const Home = () => {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
   return (
     <>
       <NextSeo
-        title="Buzzvel Projects - Interactive Showcase"
-        description="Explore our Buzzvel projects with interactive slides showcasing our innovative solutions."
+        title="Diego Mota Cavalcante - Developer"
+        description="Welcome to my microsite! I am a developer focused on creating innovative web experiences."
+        canonical={baseUrl}
         openGraph={{
-          title: "Buzzvel Projects - Interactive Showcase",
+          url: `${baseUrl}`,
+          title: "Diego Mota Cavalcante - Developer",
           description:
-            "Explore our Buzzvel projects with interactive slides showcasing our innovative solutions.",
-          images: [
-            {
-              url: "https://www.yourwebsite.com/og-image.jpg",
-              width: 800,
-              height: 600,
-              alt: "Buzzvel Project",
-            },
-          ],
+            "Welcome to my microsite! I am a developer focused on creating innovative web experiences.",
+
+          site_name: "buzzvel-challenge",
         }}
       />
       <NavigationBar />
