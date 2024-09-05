@@ -77,7 +77,7 @@ const WhyBuzzvel = () => {
                 Innovation at Our Core
               </h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                Buzzvel is always exploring new technologies. The Buzzlabs team
+                Buzzvel is always exploring new technologies. The Buzzlvel team
                 is ahead of the curve, integrating the latest innovations to set
                 trends rather than follow them. This aligns perfectly with my
                 passion for cutting-edge technology.

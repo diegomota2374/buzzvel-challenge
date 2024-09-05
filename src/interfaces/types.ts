@@ -33,3 +33,9 @@ export interface SlideProps {
 export interface ButtonProps {
   onClick: () => void;
 }
+
+export interface Event {
+  year: string;
+  title: string;
+  details: string[];
+}

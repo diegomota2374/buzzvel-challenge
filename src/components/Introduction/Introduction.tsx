@@ -23,12 +23,12 @@ const Introduction = () => {
     <>
       {/* NextSeo configuration for the page */}
       <NextSeo
-        title="Diego Mota Cavalcante - Developer"
+        title="Introduction"
         description="Welcome to my microsite! I am a developer focused on creating innovative web experiences."
         canonical={baseUrl}
         openGraph={{
           url: `${baseUrl}/#introduction`,
-          title: "Diego Mota Cavalcante - Developer",
+          title: "Diego Mota Cavalcante",
           description:
             "Welcome to my microsite! I am a developer focused on creating innovative web experiences.",
           site_name: "buzzvel-challenge",

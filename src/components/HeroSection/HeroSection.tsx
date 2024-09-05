@@ -50,7 +50,7 @@ const HeroSection = () => {
   return (
     <>
       <NextSeo
-        title="Diego Mota Cavalcante"
+        title="Hero Section"
         description="Hi, I'm Front-end Development Analyst with expertise in JavaScript, TypeScript, React, and Node.js."
         canonical={baseUrl}
         openGraph={{

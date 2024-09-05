@@ -1,18 +1,11 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
-import { NextSeo } from "next-seo";
 import TimelineEvent from "./TimelineEvent";
-
-interface Event {
-  year: string;
-  title: string;
-  details: string[];
-}
+import { Event } from "@/interfaces/types";
+import { NextSeo } from "next-seo";
 
 const Timeline: React.FC = () => {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
   const events: Event[] = [
     {
       year: "Year 1",
@@ -43,59 +36,19 @@ const Timeline: React.FC = () => {
     },
   ];
 
-  // Create an array of refs and visibility states
-  const refs = useRef<(HTMLDivElement | null)[]>([]);
-  const [inViewStates, setInViewStates] = useState<boolean[]>(
-    new Array(events.length).fill(false)
-  );
-
-  // Update visibility states when refs change
-  useEffect(() => {
-    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-      const updatedInViewStates = [...inViewStates];
-      entries.forEach((entry) => {
-        const index = refs.current.indexOf(entry.target as HTMLDivElement);
-        if (index !== -1) {
-          updatedInViewStates[index] = entry.isIntersecting;
-        }
-      });
-      setInViewStates(updatedInViewStates);
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5,
-    });
-    refs.current.forEach((ref) => ref && observer.observe(ref));
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [inViewStates]);
-
   return (
     <>
-      <NextSeo
-        title="Career Timeline at Buzzvel"
-        description="Explore the career timeline of Diego Mota Cavalcante at Buzzvel, including milestones in skill development, project leadership, and innovation."
-        openGraph={{
-          title: "Career Timeline at Buzzvel",
-          description:
-            "Explore the career timeline of Diego Mota Cavalcante at Buzzvel, including milestones in skill development, project leadership, and innovation.",
-          url: `${baseUrl}/#timeline`,
-          site_name: "buzzvel-challenger",
-        }}
-      />
       <section
         id="timeline"
         className="py-10 px-4 bg-lightBackground dark:bg-darkBackground scroll-smooth"
         data-testid="timeline-section"
       >
-        <h2
+        <h1
           className="text-3xl font-bold text-center text-lightText dark:text-darkText mb-8"
           data-testid="timeline-title"
         >
           Career Timeline at Buzzvel
-        </h2>
+        </h1>
 
         <div
           className="w-full max-w-4xl mx-auto px-4 py-8"
@@ -110,10 +63,6 @@ const Timeline: React.FC = () => {
                 key={index}
                 event={event}
                 index={index}
-                isVisible={inViewStates[index]}
-                ref={(el) => {
-                  refs.current[index] = el;
-                }}
                 data-testid={`timeline-event-${index}`}
               />
             ))}

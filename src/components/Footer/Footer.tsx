@@ -37,7 +37,7 @@ const Footer = () => {
               </li>
               <li data-testid="footer-nav-item-2">
                 <a
-                  href="#why-buzzvel"
+                  href="#why Buzzvel"
                   className="text-lightText dark:text-darkText hover:underline"
                   data-testid="footer-nav-link-why-buzzvel"
                 >

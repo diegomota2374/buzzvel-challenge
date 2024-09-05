@@ -63,12 +63,14 @@ const SlideShow = () => {
   }, [inView]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 5000); // Change slide every 5 seconds
+    if (inView) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+      }, 5000); // Change slide every 5 seconds
 
-    return () => clearInterval(interval);
-  }, []);
+      return () => clearInterval(interval);
+    }
+  }, [inView]);
 
   return (
     <>
@@ -77,9 +79,9 @@ const SlideShow = () => {
         description="Explore key projects developed by Diego Mota Cavalcante at Buzzvel, including Viplant, Miss Can, ThinkFeridas, and Vigias da Arriba."
         openGraph={{
           title: "Projects Buzzvel",
+          url: `${baseUrl}/#projects`,
           description:
             "Explore key projects developed by Diego Mota Cavalcante at Buzzvel, including Viplant, Miss Can, ThinkFeridas, and Vigias da Arriba.",
-          url: `${baseUrl}/#projects`,
           images: [
             {
               url: `${baseUrl}/assets/projectsBuzzvel/image-Viplant.jpg`,
