@@ -1,15 +1,12 @@
 "use client";
 
-import React, { forwardRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { Event } from "@/interfaces/types";
+import { TimelineEventProps } from "@/interfaces/types";
 import { useInView } from "react-intersection-observer";
 import { NextSeo } from "next-seo";
 
-const TimelineEvent = forwardRef<
-  HTMLDivElement,
-  { event: Event; index: number }
->(({ event, index }) => {
+const TimelineEvent: React.FC<TimelineEventProps> = ({ event, index }) => {
   const controls = useAnimation();
   const { ref, inView } = useInView({
     triggerOnce: false, // Ensures that the animation can be reactivated
@@ -25,7 +22,7 @@ const TimelineEvent = forwardRef<
   return (
     <>
       <NextSeo
-        title="Carreer Timeline at Buzzvel"
+        title="Career Timeline at Buzzvel"
         description="Explore the career timeline of Diego Mota Cavalcante at Buzzvel, including milestones in skill development, project leadership, and innovation."
         canonical={baseUrl}
         openGraph={{
@@ -37,7 +34,7 @@ const TimelineEvent = forwardRef<
         }}
       />
       <motion.div
-        ref={ref}
+        ref={ref} // This ref is still used here for the intersection observer
         initial={{ opacity: 0, x: 30 }}
         animate={controls}
         transition={{ type: "spring", stiffness: 50, damping: 20 }}
@@ -80,8 +77,6 @@ const TimelineEvent = forwardRef<
       </motion.div>
     </>
   );
-});
-
-TimelineEvent.displayName = "TimelineEvent";
+};
 
 export default TimelineEvent;

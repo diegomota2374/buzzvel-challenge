@@ -39,3 +39,8 @@ export interface Event {
   title: string;
   details: string[];
 }
+
+export interface TimelineEventProps {
+  event: Event;
+  index: number;
+}
