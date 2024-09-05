@@ -63,7 +63,7 @@ const Timeline: React.FC = () => {
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 1,
+      threshold: 0.5,
     });
     refs.current.forEach((ref) => ref && observer.observe(ref));
 
